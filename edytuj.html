@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script src="front_db.js"></script>
+
+
+<form method="post"   onsubmit="Zapisz('adresy','index.html');" >
+<!--
+Parametry funckcji Zapisz:
+1. Do jakiej tabeli zrobić zapisz (tabeli nie trzeba tworzyć - utworzy się automatycznie)
+2. Gdzie przekierować po zapisaniu - można zostawić puste
+-->
+
+<input type="text"    name="imie"   id="imie" placeholder="imie" required >
+<input type="number"  name="wiek"   id="wiek" placeholder="wiek">
+<input type="hidden"  name="status" id="status" >
+
+<!--
+wszystkie pola muszą mieć mieć name oraz id o takiej samej wartości
+-->
+
+<select name="miasto" id="miasto">
+<option value="">Wybierz miasto</option>
+<option>Gdańsk</option>
+<option>Sopot</option>
+<option>Gdynia</option>
+</select>
+
+<button>Zapisz</button>
+</form>
+
+<script>
+Wczytaj('adresy'); // w parametrze podajemy nazwę tabeli
+</script>
+

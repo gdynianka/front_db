@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script src="front_db.js"></script>
+
+
+<br /><br /><a href="edytuj.html">Dodaj</a><br /><br />
+<input type="text" placeholder="szukaj imie"   name="imie"    id="imie"   onKeyUp="Pobierz('adresy','lista')">
+<input type="text" placeholder="szukaj miasto" name="miasto"  id="miasto" onKeyUp="Pobierz('adresy','lista')">
+
+<table id="lista">
+
+<!--
+Tworzymy tylko jeden wiesz, który zostanie powielony.
+w nawiasach kwadratowych podajemy nazwę pola
+-->
+
+<tr>
+<td><button onClick="Usun('adresy',[id])">usun</button></td>
+<td><button ><a href="edytuj.html?id=[id]">edytuj</a></button></td>
+<td><a href="edytuj.html?id=[id]">[imie]</a></td>
+<td>[miasto]</td>
+</tr>
+</table>
+
+<script>
+Pobierz('adresy','lista');  // adresy - to nazwa tabeli, a lista id elementu gdzie wpiszemy listę wyników
+
+//Parametry funckcji Pobierz:
+//1. Z jakiej tabeli pobrać dane
+//2. Id elementu HTML do którego będzie do którego będzie wpiszana lista wyników
+
+</script>
+
+
+
